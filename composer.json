@@ -1,0 +1,21 @@
+{
+  "name": "amwal/magento-available-rates",
+  "version": "1.0.0",
+  "description": "Magento 2 module to show available rates for Amwal payment gateway",
+  "type": "magento2-module",
+  "require": {
+    "magento/framework": "*",
+    "amwal/payments": "*"
+  },
+  "license": [
+    "Proprietary"
+  ],
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Amwal\\AvailableRates\\": ""
+    }
+  }
+}
