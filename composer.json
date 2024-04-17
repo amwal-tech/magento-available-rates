@@ -8,7 +8,7 @@
     "amwal/payments": "*"
   },
   "license": [
-    "Proprietary"
+    "OSL-3.0"
   ],
   "autoload": {
     "files": [
