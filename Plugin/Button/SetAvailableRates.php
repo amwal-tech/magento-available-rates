@@ -36,7 +36,7 @@ class SetAvailableRates
          * [PRICE OF SHIPPING] = The amount that should be paid for the shipping method
          */
         foreach ($result as $key => $rate) {
-            if (!in_array($rate['carrier_code'], self::CARRIER_CODES)) {
+            if (in_array($key, self::CARRIER_CODES)) {
                 unset($result[$key]);
             }
         }
