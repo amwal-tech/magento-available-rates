@@ -8,6 +8,10 @@ use Magento\Quote\Model\Quote;
 
 class SetAvailableRates
 {
+    const CARRIER_CODES = [
+        'storepickup', 'pickupatstore'
+    ];
+    
     /**
      * @param GetQuote $subject
      * @param array $result
@@ -31,9 +35,8 @@ class SetAvailableRates
          * [TITLE OF SHIPPING METHOD] = The title that should be shown in the Amwal modal
          * [PRICE OF SHIPPING] = The amount that should be paid for the shipping method
          */
-
         foreach ($result as $key => $rate) {
-            if ($rate['carrier_code'] == 'storepickup' || $rate['carrier_code'] == 'pickupatstore') {
+            if (!in_array($rate['carrier_code'], self::CARRIER_CODES)) {
                 unset($result[$key]);
             }
         }
