@@ -9,8 +9,7 @@ use Magento\Quote\Model\Quote;
 class SetAvailableRates
 {
     const CARRIER_CODES = [
-        'storepickup',
-        'pickupatstore'
+        'pickupatstore_pickupatstore'
     ];
 
     /**
